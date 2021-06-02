@@ -1,0 +1,4 @@
+data/
+src/asia*
+dist/
+node_modules/
