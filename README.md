@@ -10,7 +10,7 @@ Plot covid case prevalence (fraction of population) per country over time, using
 
 ... then open `index.html`
 
-## Uses
+## Makes use of
 
 * [d3-simple-slider](https://github.com/johnwalley/d3-simple-slider)
 * Data from [Our World in Data](https://github.com/owid/covid-19-data)
