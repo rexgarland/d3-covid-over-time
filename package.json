@@ -1,11 +1,12 @@
 {
-  "name": "covid-over-time",
+  "name": "d3-covid-over-time",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "onchange 'src/**/*.js' -- webpack --mode development"
+    "build": "webpack --mode development",
+    "watch": "onchange 'src/**/*.js' -- npm run build"
   },
   "author": "",
   "license": "ISC",

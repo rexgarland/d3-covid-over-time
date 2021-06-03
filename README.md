@@ -6,6 +6,11 @@ Plot covid case prevalence (fraction of population) per country over time, using
 
 ## Run
 
-`npm run watch`
+`npm run build`
 
-... then open index.html
+... then open `index.html`
+
+## Uses
+
+* [d3-simple-slider](https://github.com/johnwalley/d3-simple-slider)
+* Data from [Our World in Data](https://github.com/owid/covid-19-data)

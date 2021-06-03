@@ -1,6 +1,4 @@
-import { fromEvent } from 'rxjs'
-
-import data from './asia-midres-augmented.geo.json'
+import data from './asia-augmented.geo.json'
 
 // Time
 const dataTime = data.date_index.map(d => new Date(d));
