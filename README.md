@@ -5,7 +5,11 @@ Plot covid case prevalence (fraction of population) per country over time, using
 ![screenshot](screenshot.png)
 (Example showing Asian countries alone)
 
-## Run
+## Demo
+
+Live demo at [netlify](https://goofy-kilby-0e198c.netlify.app).
+
+## Local build
 
 `npm run build`
 
