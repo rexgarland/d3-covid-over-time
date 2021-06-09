@@ -3,6 +3,7 @@
 Plot covid case prevalence (fraction of population) per country over time, using a slider.
 
 ![screenshot](screenshot.png)
+(Example showing Asian countries alone)
 
 ## Run
 

@@ -1,3 +1,5 @@
+# this module decorates each geojson country with a "daily_covid_cases" array in its "properties" attribute
+
 import pandas as pd
 import json
 from pathlib import Path
