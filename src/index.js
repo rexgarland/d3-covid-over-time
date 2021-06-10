@@ -1,10 +1,11 @@
 import data from './asia-augmented.geo.json'
 
+const COVID_DATA_ATTRIBUTE = 'covid_prevalence_normalized'
+const COVID_INDEX_ATTRIBUTE = 'covid_date_index'
+const COVID_SCALE_ATTRIBUTE = 'covid_scale'
+
 // Time
-const dataTime = data.date_index.map(d => new Date(d));
-// var dataTime = d3.range(0, 10).map(function(d) {
-//   return new Date(1995 + d, 10, 3);
-// });
+const dataTime = data[COVID_INDEX_ATTRIBUTE].map(d => new Date(d));
 
 var sliderTime = d3
   .sliderBottom()
@@ -72,31 +73,16 @@ function alphaRed(float) {
 
 // -------- data wrangling --------------
 
-let dataLen
-
-const maxVal = data.features.reduce((a,v) => {
-  if (v.properties?.daily_covid_cases) {
-    if (!dataLen) {
-      dataLen = v.properties.daily_covid_cases.length
-    }
-    return Math.max(a,Math.max(...v.properties.daily_covid_cases)/v.properties.population)
-  } else {
-    return a
-  }
-}, 0)/100
-
 function plotVal(index) {
   return (feature) => {
-    if (!feature.properties.daily_covid_cases) {
+    if (!feature.properties[COVID_DATA_ATTRIBUTE]) {
       return 0
     }
-    const percentage = feature.properties.daily_covid_cases[index]/feature.properties.population;
-    const relative = percentage / maxVal;
-    return relative; // goes from 0 to 1
+    return feature.properties[COVID_DATA_ATTRIBUTE][index];
   }
 }
 
-const minDate = new Date(data.date_index[0]);
+const minDate = new Date(data[COVID_INDEX_ATTRIBUTE][0]);
 
 const fillFn = date => {
   const index = Math.floor((date - minDate)/(24 * 60 * 60 * 1000))
@@ -117,4 +103,4 @@ const updateMap = date => {
       .attr('stroke-width', 0.6)
 }
 
-updateMap(new Date(data.date_index[0]))
+updateMap(new Date(data[COVID_INDEX_ATTRIBUTE][0]))

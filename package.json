@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development && cp public/index.html dist/index.html",
-    "watch": "onchange 'src/**/*.js' -- npm run build"
+    "watch": "onchange 'src/**/*.js' 'preprocessing/*.py' -- sh build.sh"
   },
   "author": "",
   "license": "ISC",

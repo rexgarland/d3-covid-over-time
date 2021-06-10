@@ -13,7 +13,7 @@ Live demo at [netlify](https://goofy-kilby-0e198c.netlify.app).
 
 `npm run build`
 
-... then open `index.html`
+... then open `dist/index.html`
 
 ## Makes use of
 
