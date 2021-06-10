@@ -1,6 +1,6 @@
 # d3-covid-over-time
 
-Plot covid case prevalence (fraction of population) per country over time, using a slider.
+Interactive plot for showing relative covid cases over time (7-day-averaged)
 
 ![screenshot](screenshot.png)
 (Example showing Asian countries alone)
